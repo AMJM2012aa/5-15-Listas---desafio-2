@@ -1,0 +1,26 @@
+def buscar_producto(lista_productos, codigo):
+  """Busca un código de producto en una lista y devuelve su posición.
+
+  Args:
+    lista_productos: Una lista de códigos de productos.
+    codigo: El código de producto a buscar.
+
+  Returns:
+    La posición del código en la lista si se encuentra, -1 en caso contrario.
+  """
+
+  if codigo in lista_productos:
+    return lista_productos.index(codigo)
+  else:
+    return -1
+
+# Ejemplo de uso:
+lista_productos = ["A123", "B456", "C789", "D101"]
+codigo_a_buscar = input("Ingrese el código del producto a buscar: ")
+
+resultado = buscar_producto(lista_productos, codigo_a_buscar)
+
+if resultado != -1:
+  print(f"El producto se encuentra en la posición: {resultado + 1}")
+else:
+  print("El producto no se encontró en la lista.")
